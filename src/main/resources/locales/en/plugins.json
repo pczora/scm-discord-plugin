@@ -1,0 +1,8 @@
+{
+  "scm-discord-plugin": {
+    "nav-link": "Discord",
+    "form": {
+      "header": "Discord Configuration"
+    }
+  }
+}

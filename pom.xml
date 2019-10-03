@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!--
+      maven pom model version, should always be version 4.0.0.
+    -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+      The parent module of the plugin. The parent part of the pom defines which
+      SCM-Manager API level is used for the plugin. The groupId should always be
+      sonia.scm.plugins and the artifactId should be scm-plugins. The version
+      determines the api level and the minimum version of SCM-Manager.
+      Further reading http://maven.apache.org/guides/introduction/introduction-to-the-pom.html#Project_Inheritance
+    -->
+    <parent>
+        <groupId>sonia.scm.plugins</groupId>
+        <artifactId>scm-plugins</artifactId>
+        <version>2.0.0-SNAPSHOT</version>
+    </parent>
+
+    <!--
+      Information for the plugin backend of SCM-Manager and Maven. If the parent
+      version 1.5 or higher this informations are copied to the plugin descriptor.
+      For more informations read http://maven.apache.org/guides/getting-started/index.html#How_do_I_make_my_first_Maven_project
+      and http://maven.apache.org/pom.html.
+    -->
+    <groupId>dev.czora.scm.plugins</groupId>
+    <artifactId>scm-discord-plugin</artifactId>
+    <version>2.0-SNAPSHOT</version>
+    <packaging>smp</packaging>
+    <name>scm-discord-plugin</name>
+    <url>https://bitbucket.org/sdorra/scm-jenkins-plugin</url>
+    <description>Let SCMM speak to Discord</description>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>net.dv8tion</groupId>
+            <artifactId>JDA</artifactId>
+            <version>4.0.0_50</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+    </dependencies>
+
+    <!--
+      SCM-Manager maven repository. This part is required to fetch the maven
+      plugins and must be available in each pom of a SCM-Manager plugin.
+    -->
+    <repositories>
+
+        <repository>
+            <id>maven.scm-manager.org</id>
+            <name>scm-manager release repository</name>
+            <url>http://maven.scm-manager.org/nexus/content/groups/public</url>
+        </repository>
+
+        <repository>
+            <id>jcenter</id>
+            <name>jcenter-bintray</name>
+            <url>https://jcenter.bintray.com</url>
+        </repository>
+
+    </repositories>
+
+    <build>
+        <plugins>
+
+        </plugins>
+    </build>
+</project>
