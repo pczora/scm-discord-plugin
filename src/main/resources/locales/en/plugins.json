@@ -2,7 +2,11 @@
   "scm-discord-plugin": {
     "nav-link": "Discord",
     "form": {
-      "header": "Discord Configuration"
+      "header": "Discord Configuration",
+      "token": "Token",
+      "tokenHelp": "The Discord bot's token",
+      "channel": "Channel",
+      "channelHelp": "The name of the channel in which to post status updates"
     }
   }
 }
